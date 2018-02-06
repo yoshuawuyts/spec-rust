@@ -1,7 +1,14 @@
+pub fn create_vector() -> Vec<i32> {
+  Vec::new()
+}
+
 #[cfg(test)]
 mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+  use super::*;
+
+  #[test]
+  fn initialize_an_empty_vector() {
+    let vec = create_vector();
+    assert_eq!(vec.len(), 0);
+  }
 }

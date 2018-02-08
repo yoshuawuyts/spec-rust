@@ -1,5 +1,5 @@
 # spec-rust
-An encoding of my Rust learnings into a spec test suite.
+An encoding of my Rust learnings into a test suite.
 
 ## Usage
 ```sh

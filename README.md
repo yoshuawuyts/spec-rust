@@ -12,7 +12,7 @@ $ make
 ## License
 [Apache-2.0](./LICENSE)
 
-## Tests
+---
 ```
 0 tests, 0 benchmarks
 src/heap.rs - heap::create_empty (line 8): test

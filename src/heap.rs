@@ -1,9 +1,16 @@
-/// Create a new vector.
+#[derive(Debug)]
+pub struct Example {
+  name: String,
+}
+
+/// Create an empty box.
 ///
 /// ```
-/// let vec = spec::heap::create_empty();
-/// assert_eq!(vec.len(), 0);
+/// let myBox = spec::heap::create_empty();
+/// assert_eq!(myBox.count(), 0);
 /// ```
-pub fn create_empty() -> Vec<i32> {
-  Vec::new()
+pub fn create_empty() -> Box<Example> {
+  Box::new(Example {
+    name: String::from("sup"),
+  })
 }

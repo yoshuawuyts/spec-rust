@@ -15,8 +15,10 @@ $ make
 ---
 ```
 0 tests, 0 benchmarks
-src/heap.rs - heap::create_empty (line 8): test
+src/heap.rs - heap::create_empty (line 18): test
+src/macros.rs - foo (line 3): test
+src/macros.rs - multiply (line 21): test
 src/vectors.rs - vectors::create_empty (line 3): test
 
-2 tests, 0 benchmarks
+4 tests, 0 benchmarks
 ```

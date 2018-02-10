@@ -1,4 +1,4 @@
-/// Try out a macro
+/// Arm matching macro.
 ///
 /// ```rust
 /// #[macro_use] extern crate spec;
@@ -14,4 +14,17 @@
 macro_rules! foo {
   (x => $e:expr) => ($e);
   (y => $e:expr) => (2 * $e);
+}
+
+/// Multiply macro.
+///
+/// ```rust
+/// #[macro_use] extern crate spec;
+/// fn main() {
+///   assert_eq!(multiply!(2 + 3), 25);
+/// }
+/// ```
+#[macro_export]
+macro_rules! multiply {
+  ($e:expr) => ($e * 5);
 }

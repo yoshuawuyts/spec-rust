@@ -27,9 +27,9 @@ fn read_file () -> Result<(), Error> {
 
   // TODO: so this super weird syntax over here where it owns, then returns the
   // owned value is because we can't do borrows with async/await.
-  // Congratulations, this is terrible - but not having this would be *so much
-  // worse*. So yeah, I guess this is the reality we have right now. I like it.
+  // This is isn't great - but not having this would be *so much worse*. So
+  // yeah, we just have to accept the reality we live in. I like it.
   let (file, data) = await!(tokio::io::read_to_end(file, vec![]))?;
-  println!("{:?}", data);
+  println!("\n{:#}", String::from_utf8(data)?);
   Ok(())
 }
